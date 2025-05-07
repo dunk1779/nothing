@@ -5090,7 +5090,7 @@ function Library:CreateWindow(...)
                 TextSize = 14;
                 Text = "Text";
                 TextXAlignment = Enum.TextXAlignment.Left;
-                TextColor3 = Color3.fromRGB(255, 55, 55);
+                TextColor3 = Color3.fromRGB(0, 0, 55);
                 ZIndex = 5;
                 Parent = TopBarInner;
             });
