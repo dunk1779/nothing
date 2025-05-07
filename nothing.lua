@@ -95,11 +95,11 @@ local Library = {
     MainColor = Color3.fromRGB(28, 28, 28);
     BackgroundColor = Color3.fromRGB(20, 20, 20);
 
-    AccentColor = Color3.fromRGB(63, 100, 124);
-    DisabledAccentColor = Color3.fromRGB(63, 100, 124);
+    AccentColor = Color3.fromRGB(0, 85, 255);
+    DisabledAccentColor = Color3.fromRGB(142, 142, 142);
 
-    OutlineColor = Color3.fromRGB(41, 43, 56);
-    DisabledOutlineColor = Color3.fromRGB(41, 43, 56);
+    OutlineColor = Color3.fromRGB(50, 50, 50);
+    DisabledOutlineColor = Color3.fromRGB(70, 70, 70);
 
     DisabledTextColor = Color3.fromRGB(142, 142, 142);
 
