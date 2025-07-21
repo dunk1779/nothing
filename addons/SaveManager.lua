@@ -1,6 +1,11 @@
 local cloneref = (cloneref or clonereference or function(instance: any) return instance end)
 local httpService = cloneref(game:GetService('HttpService'))
 local isfolder, isfile, listfiles = isfolder, isfile, listfiles;
+local assert = function(condition, errorMessage) 
+    if (not condition) then
+        error(if errorMessage then errorMessage else "assert failed", 3)
+    end
+end
 
 if typeof(copyfunction) == "function" then
     -- Fix is_____ functions for shitsploits, those functions should never error, only return a boolean.
@@ -398,7 +403,7 @@ local SaveManager = {} do
 
     --// GUI \\--
     function SaveManager:BuildConfigSection(tab)
-        assert(self.Library, 'Must set SaveManager.Library')
+        assert(self.Library, 'SaveManager:BuildConfigSection -> Must set SaveManager.Library')
 
         local section = tab:AddRightGroupbox('Configuration')
 
