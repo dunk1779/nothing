@@ -3,6 +3,11 @@ local httpService = cloneref(game:GetService('HttpService'))
 local httprequest = (syn and syn.request) or request or http_request or (http and http.request)
 local getassetfunc = getcustomasset or getsynasset
 local isfolder, isfile, listfiles = isfolder, isfile, listfiles;
+local assert = function(condition, errorMessage) 
+    if (not condition) then
+        error(if errorMessage then errorMessage else "assert failed", 3)
+    end
+end
 
 if typeof(copyfunction) == "function" then
     -- Fix is_____ functions for shitsploits, those functions should never error, only return a boolean.
@@ -383,18 +388,18 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:CreateGroupBox(tab)
-		assert(self.Library, 'Must set ThemeManager.Library first!')
+		assert(self.Library, 'ThemeManager:CreateGroupBox -> Must set ThemeManager.Library first!')
 		return tab:AddLeftGroupbox('Themes')
 	end
 
 	function ThemeManager:ApplyToTab(tab)
-		assert(self.Library, 'Must set ThemeManager.Library first!')
+		assert(self.Library, 'ThemeManager:ApplyToTab -> Must set ThemeManager.Library first!')
 		local groupbox = self:CreateGroupBox(tab)
 		self:CreateThemeManager(groupbox)
 	end
 
 	function ThemeManager:ApplyToGroupbox(groupbox)
-		assert(self.Library, 'Must set ThemeManager.Library first!')
+		assert(self.Library, 'ThemeManager:ApplyToGroupbox -> Must set ThemeManager.Library first!')
 		self:CreateThemeManager(groupbox)
 	end
 
